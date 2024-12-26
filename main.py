@@ -6,6 +6,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 
 # Made by @.flod on Discord
+# Shoot a message if you need any help
 
 
 def get_uuid(username):
