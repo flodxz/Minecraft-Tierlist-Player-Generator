@@ -3,6 +3,11 @@ import os
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
+
+
+# Made by @.flod on Discord
+
+
 def get_uuid(username):
     """Convert Minecraft username to UUID using Mojang API"""
     response = requests.get(f"https://api.mojang.com/users/profiles/minecraft/{username}")
