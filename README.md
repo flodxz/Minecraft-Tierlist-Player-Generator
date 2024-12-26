@@ -32,7 +32,7 @@ Generate player head avatars with usernames using the Minecraft font for multipl
      pip3 install requests
      pip3 install Pillow
      ```
-3. Open terminal and run `main.py`
+3. Open Terminal and run `main.py`
      ```
      cd path\to\folder
      python3 main.py
