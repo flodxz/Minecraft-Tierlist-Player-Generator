@@ -13,10 +13,13 @@ Generate player head avatars with usernames using the Minecraft font for multipl
 
 2. Install required libraries:
      ```
-     pip install requests 
-     pip install Pillow
+     pip install requests Pillow
      ```
-
+3. Open Command Prompt and run `main.py`
+     ```
+     cd path\to\folder
+     python main.py
+     ```
 
 
 ### Mac
@@ -27,6 +30,11 @@ Generate player head avatars with usernames using the Minecraft font for multipl
      ```
      pip3 install requests
      pip3 install Pillow
+     ```
+3. Open Terminal and run `main.py`
+     ```
+     cd path\to\folder
+     python3 main.py
      ```
 
 ---
