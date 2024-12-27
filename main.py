@@ -187,6 +187,7 @@ def main():
     # Path to Minecraft font
     # CHANGE IF YOU WANT TO USE A DIFFERENT FONT
     font_path = Path("Minecraft.ttf")
+    
     if not font_path.exists():
         print(red("Warning: Minecraft.ttf not found in script directory!"))
     

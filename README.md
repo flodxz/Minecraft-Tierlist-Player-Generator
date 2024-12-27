@@ -1,5 +1,5 @@
 # Minecraft Tierlist Player Generator
-Generate player head avatars with usernames using the Minecraft font for multiple players at once.
+Generate player head and body avatars with usernames using the Minecraft font for multiple players at once.
 
 ---
 
@@ -13,7 +13,8 @@ Generate player head avatars with usernames using the Minecraft font for multipl
 
 2. Install required libraries:
      ```
-     pip install requests Pillow
+     pip install requests
+     pip install Pillow
      ```
 3. Open Command Prompt and run `main.py`
      ```
@@ -79,7 +80,8 @@ Create your `players.txt`:
 1. You can adjust the default font size by changing `DESIRED_FONT_SIZE`:
 
    ```python
-   DESIRED_FONT_SIZE = 32 
+   FONT_SIZE_HEAD = 32
+   FONT_SIZE_BODY = 64
    ```
 
 2. You can change the font by putting a new font inside the folder and changing:
