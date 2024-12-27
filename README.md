@@ -54,10 +54,12 @@ Create your `players.txt`:
 
 ### Windows
 1. Open Command Prompt
+
 2. Navigate to your project folder:
    ```
    cd path\to\your\folder
    ```
+
 3. Run the script:
    ```
    python main.py
@@ -65,10 +67,12 @@ Create your `players.txt`:
 
 ### Mac
 1. Open Terminal
+
 2. Navigate to your project folder:
    ```
    cd path/to/your/folder
    ```
+   
 3. Run the script:
    ```
    python3 main.py
