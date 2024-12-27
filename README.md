@@ -16,11 +16,6 @@ Generate player head and body avatars with usernames using the Minecraft font fo
      pip install requests
      pip install Pillow
      ```
-3. Open Command Prompt and run `main.py`
-     ```
-     cd path\to\folder
-     python main.py
-     ```
 
 
 ### Mac
@@ -31,11 +26,6 @@ Generate player head and body avatars with usernames using the Minecraft font fo
      ```
      pip3 install requests
      pip3 install Pillow
-     ```
-3. Open Terminal and run `main.py`
-     ```
-     cd path\to\folder
-     python3 main.py
      ```
 
 ---
@@ -55,28 +45,20 @@ Create your `players.txt`:
 ### Windows
 1. Open Command Prompt
 
-2. Navigate to your project folder:
-   ```
-   cd path\to\your\folder
-   ```
-
-3. Run the script:
-   ```
-   python main.py
-   ```
+2. Open Command Prompt and run `main.py`
+     ```
+     cd path\to\folder
+     python main.py
+     ```
 
 ### Mac
 1. Open Terminal
 
-2. Navigate to your project folder:
-   ```
-   cd path/to/your/folder
-   ```
-   
-3. Run the script:
-   ```
-   python3 main.py
-   ```
+2. Open Terminal and run `main.py`
+     ```
+     cd path\to\folder
+     python3 main.py
+     ```
 ---
 
 
