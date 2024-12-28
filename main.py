@@ -124,6 +124,21 @@ def create_body_avatar(avatar_bytes, username, font_path, desired_font_size=64):
     return final_image
 
 
+def get_generation_list():
+    """User input"""
+
+    while True:
+        print("\n")
+        print(bold("What would you like to generate?"))
+        print("1. single player")
+        print("2. multiple players")
+        print("\n")
+        choice = input(bold("Enter your choice (1-2): ")).strip()
+        
+        if choice in ['1', '2']:
+            return choice
+        print("Invalid choice. Please enter 1 or 2.")
+
 def get_generation_type():
     """User input"""
 
@@ -178,6 +193,7 @@ def main():
     head_folder = Path("Minecraft-Players-Head")
     body_folder = Path("Minecraft-Players-Body")
 
+    generation_list = get_generation_list()
     generation_type = get_generation_type()
     
     head_folder.mkdir(exist_ok=True)
@@ -199,29 +215,42 @@ def main():
     FONT_SIZE_HEAD = 32
     FONT_SIZE_BODY = 64
     
-    try:
-        with open("players.txt", 'r') as f:
-            usernames = [line.strip() for line in f if line.strip()]
-    except FileNotFoundError:
-        print(red("Error: players.txt not found!"))
-        return
-    
-    print("\n")
-    print(f"Found {len(usernames)} players in file")
-    
-    for username in usernames:
-        uuid = get_uuid(username)
-        if uuid:
-            download_and_save_avatar(
-                uuid,
-                username,
-                head_folder,
-                body_folder,
-                font_path,
-                generation_type,
-                font_size_head=FONT_SIZE_HEAD,
-                font_size_body=FONT_SIZE_BODY
-            )
+    if generation_list == '1':
+            username = input(bold("\nEnter player username: ")).strip()
+            uuid = get_uuid(username)
+            if uuid:
+                download_and_save_avatar(
+                    uuid,
+                    username,
+                    head_folder,
+                    body_folder,
+                    font_path,
+                    generation_type,
+                    font_size_head=FONT_SIZE_HEAD,
+                    font_size_body=FONT_SIZE_BODY
+                )
+    else:
+        filename = input(bold("\nEnter the name of the text file containing usernames: ")).strip()
+        try:
+            with open(filename, 'r') as f:
+                usernames = [line.strip() for line in f if line.strip()]
+            print(f"\nFound {len(usernames)} players in file")
+            for username in usernames:
+                uuid = get_uuid(username)
+                if uuid:
+                    download_and_save_avatar(
+                        uuid,
+                        username,
+                        head_folder,
+                        body_folder,
+                        font_path,
+                        generation_type,
+                        font_size_head=FONT_SIZE_HEAD,
+                        font_size_body=FONT_SIZE_BODY
+                    )
+        except FileNotFoundError:
+            print(red(f"Error: {filename} not found!"))
+            return
     
     print("\n")
     print(green("Process completed!"))
