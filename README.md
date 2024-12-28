@@ -1,5 +1,5 @@
 # Minecraft Tierlist Player Generator
-Generate player head and body avatars with usernames using the Minecraft font for multiple players at once.
+Generate player head and body avatars with usernames using the Minecraft font for one player or multiple players at once based on a player list.
 
 ---
 
@@ -33,7 +33,7 @@ Generate player head and body avatars with usernames using the Minecraft font fo
 
 ## Setting Up the Files
 
-Create your `players.txt`:
+Edit `players.txt` or create your own `.txt`file:
    - Open a text editor
    - Add one Minecraft username per line
    - Save the file
